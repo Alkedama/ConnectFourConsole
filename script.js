@@ -47,7 +47,8 @@ function Gameboard() {
   // but we won't need it after we build our UI
   const printBoard = () => {
     const boardWithCellValues = board.map((row) => row.map((cell) => cell.getValue()))
-    console.log(boardWithCellValues);
+    console.log(`printBoard: ${boardWithCellValues}`);
+    console.log(boardWithCellValues)
   };
 
   // Here, we provide an interface for the rest of our
@@ -110,7 +111,7 @@ function GameController(
 
   const printNewRound = () => {
     board.printBoard();
-    console.log(`${getActivePlayer().name}'s turn.`);
+    console.log(`printNewRound: ${getActivePlayer().name}'s turn.`);
   };
 
   const playRound = (column) => {
